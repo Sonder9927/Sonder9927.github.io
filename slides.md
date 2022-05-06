@@ -1,29 +1,25 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
+class: text-center
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
 info: |
   ## Slidev Starter Template
-  Presentation slides for developers.
+  Presentation slides for group meeting.
 
   Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
   persist: false
+title: Presentation
 ---
 
-# Welcome to Slidev
+## Regional tomographic inversion of the amplitude and phase
 
-Presentation slides for developers
+## of Rayleigh waves with 2-D sensitivity kernels
+
+
+Presentation for meeting
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -47,22 +43,19 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# What is Slidev?
+# What about?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Regional tomographic inversion of the amplitude and phase of Rayleigh waves with 2-D sensitivity kernels
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- **Tomography** - The effects of heterogeneous structure on the wavefield in a regional surface wave.
+- **Sensitivity kernels** - 2-D sensitivity kernels for fundamental-mode Rayleigh waves based on the single-scattering Born approximation.
+- **Comparison** - to data obtained from seismic waveforms synthesized by the pseudo-spectral method for plane Rayleigh waves propagating through heterogeneous structure.
+- **Inversion method** - applied to synthesized data obtained from a numerical simulation modelling Rayleigh wave propagation over checkerboard structure.
 
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+Read more about [Tomographic](https://sli.dev/guide/why)
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -83,54 +76,51 @@ h1 {
 
 ---
 
-# Navigation
+# Tomography
+Ray theory and finite frequency.
+<br>
+<div grid="~ cols-2 gap-2" m="-t-2">
+<img border="rounded" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fqtts.lamost.org%2Fartical%2Fdata%2Fattachment%2Fforum%2Fmonth_0811%2F20081128_825f9cabc5ef594c80cfdeQe8SXmaJcd.jpg&refer=http%3A%2F%2Fqtts.lamost.org&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654064603&t=d2902e0debf5f4fd8841700592e5302c">
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+<img border="rounded" src="/images/scatter.png" style="display:block;margin:auto;">
 
-### Keyboard Shortcuts
+</div>
+<br>
+<br>
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+Read more about [Fréchet kernels for finite-frequency traveltimes.](https://academic.oup.com/gji/article/141/1/157/578991).
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
 
-# Code
+# Sentivity kernels
 
-Use code snippets and get the highlighting directly![^1]
+In this study, we use the 2-D kernels[^1] derived to represent the sensitivity of surface waves to structure.
+<br>
+<p>
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+$[o(\omega)-T(\omega)s(\omega)]^2 =$ minimum, in this single-observation case: $T(\omega) = \frac{o(\omega)}{s(\omega)}$
+</p>
+<p>
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
+In the perturbed earth, $s(\omega)=Ae^{-i\phi}$ and $o(\omega)=(A+\delta A)e^{-i(\phi+\delta\phi)}$
+</p>
+<p>
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+In the Born approximation, $o(\omega)=s(\omega)+\delta s(\omega)$
+</p>
+<div grid="~ cols-2 gap-2" m="-t-2">
 
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+The transfer function is perturbed away from unity:<br>
+$T(\omega)=1+\delta T(\omega)$, where $\delta T(\omega)=\frac{\delta s(\omega)}{s(\omega)}$.
+
+Correct to first order in the small perturbations, $\delta T(\omega)\approx lnT(\omega)=\delta lnA(\omega)-i\delta\phi(\omega)$
+</div>
+
+$$
+\delta\phi(\omega)=-Im(\frac{\delta s}{s}),\quad\quad \delta lnA(\omega)=Re(\frac{\delta s}{s})
+$$
+
+[^1]: [Zhou, Y., Dahlen, F.A. & Nolet, G., 2004. 3-D sensitivity kernels for surfacewave observables, Geophys. J. Int., 158, 142-168.](https://academic.oup.com/gji/article-abstract/158/1/142/683426)
 
 <style>
 .footnotes-sep {
@@ -146,231 +136,371 @@ function updateUser(id: number, update: User) {
 
 ---
 
-# Components
+# Sentivity kernels
 
-<div grid="~ cols-2 gap-4">
+In this study, we use the 2-D kernels[^1] derived to represent the sensitivity of surface waves to structure.
+<div grid="~ cols-2 gap-2" m="-t-2">
 <div>
 
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
+### 2-D sensitivity kernels
+<br>
+<br>
+<br>
+<br>
 <div>
 
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
+$$
+\delta d=\iint_\Omega K^c_d(r,\omega)(\delta c/c)\mathrm{d}x^2
+$$
+</div>
+</div>
+<div>
+<img border="rounded" src="/images/zhou-2d.png" >
 </div>
 </div>
 
+[^1]: [Zhou, Y., Dahlen, F.A. & Nolet, G., 2004. 3-D sensitivity kernels for surfacewave observables, Geophys. J. Int., 158, 142-168.](https://academic.oup.com/gji/article-abstract/158/1/142/683426)
+
+<style>
+.footnotes-sep {
+  @apply mt-15 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+</style>
 
 ---
-class: px-20
+
+# Sentivity kernels
+
+In this study, we use the 2-D kernels[^1] derived to represent the sensitivity of surface waves to structure.
+<div grid="~ cols-2 gap-2" m="-t+20">
+<div>
+
+### 2-D sensitivity kernels
+<br>
+<br>
+
+$$
+K^c_{\phi}(r,\omega)=Im(\frac{k^2R''e^{-i[kx''-k\Delta x+\pi/4]}}{R\sqrt{2\pi kx''}})
+$$
+$$
+K^c_A(r,\omega)=-Re(\frac{k^2R''e^{-i[kx''-k\Delta x+\pi/4]}}{R\sqrt{2\pi kx''}})
+$$
+</div>
+<div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img border="rounded" src="/images/fig1.png" >
+</div>
+</div>
+
+<!--
+They are formulated for single-frequency observables of phase and amplitude from unwindowed
+seismograms in the time domain.
+-->
+
 ---
 
-# Themes
+# Fresnel zones
+named after physicist Augustin-Jean Fresnel
+<br>
+<div grid="~ cols-2 gap-2" m="-t+20">
+<div>
+<img border="rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Fresnel_zone_disrupted.png/300px-Fresnel_zone_disrupted.png" width="277">
+</div>
+<div>
+<img border="rounded" src="/images/FresnelSVG1.svg" width="800">
+</div>
+</div>
+<div class="abs-br m-6 flex">
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+Learn more about [Fresnel zones](https://en.wikipedia.org/wiki/Fresnel_zone).
+</div>
+<!--
+Fresnel zones are ellipsoids with the foci at the transmitter and the receiver, where the path length between the direct path and the alternative paths are multiples of half-wavelength (\lambda/2). Rays emanating from odd-numbered Fresnel zones cause destructive interference and the rays from the even-numbered Fresnel zones cause constructive interference.
+-->
+
+---
+
+# Map view
+<div>
+<img border="rounded" src="/images/fig2.png">
+</div>
+
+<!--
+An example of sensitivity kernels for a waveform at the period of 50s
+windowed using a 300s window with a half cosine taper of 50s on
+each end is shown in Fig. 2.
+-->
+
+<style>
+img {
+  position: absolute;
+  top: 17%;
+  left: 20%;
+}
+</style>
+
+---
+
+# Numerical simulation
+
+### Pseudo-spectral method[^2]
+<div>
+<img border="rounded" src="/images/fig3.png">
+</div>
+
+[^2]: [Hung, S.-H. & Forsyth, D.W., 1998. Modeling anisotropic wave propagation in oceanic inhomogeneous structures using the parallel multi-domain pseudo spectral method, Geophys. J. Int., 133, 726-740.](https://adsabs.harvard.edu/pdf/1998GeoJI.133..726H)
+
+
+<!--
+288 X 288 X 64 grid with grid spacing of 20 km in the
+horizontal directions and an average of 10 km vertically.
+
+$v_p=8$km/s, $v_s=4.62$, $\rho=3.3$kg/m^{-3}
+
+Rayleigh $v_{exterior}=4.15$, $v_{interior}=4.36$
+
+-->
+
+<style>
+.footnotes-sep {
+  @apply mt-85 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+img {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+</style>
+
+---
+
+# Scattered wavefields
+<div>
+<img border="rounded" src="/images/fig4.png">
+</div>
+
+<!--
+-->
+
+<style>
+img {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 566px;
+}
+</style>
+
+---
+
+# Cross-sections
+<div>
+<img border="rounded" src="/images/fig5.png">
+</div>
+
+<!--
+-->
+
+<style>
+img {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 666px;
+}
+</style>
+
+---
+
+# Radiation pattern
+<div>
+<img border="rounded" src="/images/afig6.png">
+</div>
+
+<!--
+The scattering is fundamental mode to fundamental mode of Rayleigh wave at period
+of 25s for P- and S-wave heterogeneities, assuming the medium is a Poisson solid.
+-->
+
+<style>
+img {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  height: 453px;
+}
+</style>
+
+---
+
+# Cross-section
+<div>
+<img border="rounded" src="/images/fig7.png" style="display:block;margin:auto auto;width:466px;">
+</div>
+
+<!--
+<style>
+img {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 566px;
+}
+</style>
+-->
+
+---
+
+# Amplitude at each station
+placed along a line perpendicular to the medium boundary.
+<div>
+<img border="rounded" src="/images/fig8.png">
+</div>
+
+<!--
+Amplitude in higher velocity region is smaller, but the transition is not
+instantaneous. The case shown is for 25s period with wavelength about 100km.
+-->
+
+<style>
+img {
+  position: absolute;
+  top: 22%;
+  left: 20%;
+  width: 566px;
+}
+</style>
+
+---
+
+# Recovered phase velocity maps
+<div>
+<img border="rounded" src="/images/fig9.png">
+</div>
+
+<!--
+-->
+
+<style>
+img {
+  position: absolute;
+  top: 22%;
+  left: 20%;
+  width: 566px;
+}
+</style>
+
+---
+
+# Recovered phase velocity maps
 
 <div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
+<img border="rounded" src="/images/fig10-1.png" width="300">
+<img border="rounded" src="/images/fig10-2.png" width="300">
 </div>
 
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+<img class="img2" border="rounded" src="/images/fig10-3.png" width="300">
 
----
-preload: false
----
+<style>
 
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
+.img2 {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  width: 313px;
 }
-</script>
+</style>
 
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+<!--
 
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
+-->
 
 ---
 
-# LaTeX
+# Constructed model
+with random phase velocity.
+<div>
+<img border="rounded" src="/images/fig11.png">
+</div>
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+<!--
+-->
 
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
+<style>
+img {
+  position: absolute;
+  top: 20%;
+  left: 24%;
+  width: 453px;
+}
+</style>
 
 ---
 
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
+# Amplitude distribution
+with random phase velocity.
+<div>
+<img border="rounded" src="/images/fig12.png" style="display:block;margin:auto auto;width:699px;">
 </div>
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+<!--
+
+<style>
+img {
+  position: absolute;
+  top: 22%;
+  left: 3%;
+  width: 915px;
+}
+</style>
+-->
+
+---
+
+# Recovered maps
+with random phase velocity.
+<div>
+<img border="rounded" src="/images/fig13.png" style="display:block;margin:auto auto;width:720px;">
+</div>
+
+<!--
+-->
+
+---
+
+# Phase velocity anomalies in southern California
+for Rayleigh waves at 100s period.
+<div>
+<img border="rounded" src="/images/fig14.png">
+</div>
+
+<!--
+-->
+
+<style>
+img {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  width: 915px;
+}
+</style>
 
 
 ---
@@ -378,6 +508,6 @@ layout: center
 class: text-center
 ---
 
-# Learn More
+# Thank You
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+[sensitivity kernels](https://sli.dev) · [surface waves](https://github.com/slidevjs/slidev) · [tomography](https://sli.dev/showcases.html)
