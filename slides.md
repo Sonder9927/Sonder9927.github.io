@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: /images/wall.webp
+background: /images/wall.jpg
 class: text-center
 highlighter: shiki
 lineNumbers: false
