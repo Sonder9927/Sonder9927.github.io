@@ -1,8 +1,6 @@
 ---
 theme: seriph
-/* background: https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_1600/zht892fiz6h7qxur0gn1.jpg
-   */
-background: /images/wall.png
+background: https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_1600/zht892fiz6h7qxur0gn1.jpg
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -16,7 +14,7 @@ drawings:
 title: Presentation
 ---
 
-# Joplin - Free your notes
+#   Joplin - Free your notes
 
 Presentation for making notes.
 
