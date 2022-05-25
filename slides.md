@@ -1,12 +1,12 @@
 ---
 theme: seriph
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: /images/wall.webp
 class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
   ## Slidev Starter Template
-  Presentation slides for group meeting.
+  Presentation slides.
 
   Learn more at [Sli.dev](https://sli.dev)
 drawings:
@@ -14,12 +14,9 @@ drawings:
 title: Presentation
 ---
 
-## Regional tomographic inversion of the amplitude and phase
+# Joplin - Free your notes
 
-## of Rayleigh waves with 2-D sensitivity kernels
-
-
-Presentation for meeting
+Presentation for making notes.
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -31,31 +28,29 @@ Presentation for meeting
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+  <a href="https://github.com/laurent22/joplin" target="_blank" alt="GitHub"
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
 
 # What about?
 
-Regional tomographic inversion of the amplitude and phase of Rayleigh waves with 2-D sensitivity kernels
+Joplin may be able to help you with these problems:
 
-- **Tomography** - The effects of heterogeneous structure on the wavefield in a regional surface wave.
-- **Sensitivity kernels** - 2-D sensitivity kernels for fundamental-mode Rayleigh waves based on the single-scattering Born approximation.
-- **Comparison** - to data obtained from seismic waveforms synthesized by the pseudo-spectral method for plane Rayleigh waves propagating through heterogeneous structure.
-- **Inversion method** - applied to synthesized data obtained from a numerical simulation modelling Rayleigh wave propagation over checkerboard structure.
+- **Protection of notes** - Cloud sync, encryption, compatibility.
+- **Writing fluently** - Write whatever you want, get rid of mouse clicks.
+- **Review** - Fast access, easy to find globally.
+- **Customize** - In addition to the officially provided content, you can make the layout according to your own preferences.
+- **Community** - An active community means you have access to more and better resources..
 
 <br>
 <br>
 
-Read more about [Tomographic](https://sli.dev/guide/why)
+Read more about [Joplin](https://joplinapp.org/)
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -76,163 +71,52 @@ h1 {
 
 ---
 
-# Tomography
-Ray theory and finite frequency.
-<br>
-<div grid="~ cols-2 gap-2" m="-t-2">
-<img border="rounded" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fqtts.lamost.org%2Fartical%2Fdata%2Fattachment%2Fforum%2Fmonth_0811%2F20081128_825f9cabc5ef594c80cfdeQe8SXmaJcd.jpg&refer=http%3A%2F%2Fqtts.lamost.org&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654064603&t=d2902e0debf5f4fd8841700592e5302c">
-
-<img border="rounded" src="/images/scatter.png" style="display:block;margin:auto;">
-
+# Comparison
+The superiority of joplin in cross-platform.
+<div>
+<img border="rounded" src="https://notable.app/static/images/comparison.png" style="display:block;margin:auto auto;width:100%;">
 </div>
-<br>
-<br>
 
-Read more about [Fréchet kernels for finite-frequency traveltimes.](https://academic.oup.com/gji/article/141/1/157/578991).
+Read more about [Notable](https://github.com/notable/notable).
 
 ---
+class: text-center
+---
+# Free your notes
 
-# Sentivity kernels
-
-In this study, we use the 2-D kernels[^1] derived to represent the sensitivity of surface waves to structure.
-<br>
-<p>
-
-$[o(\omega)-T(\omega)s(\omega)]^2 =$ minimum, in this single-observation case: $T(\omega) = \frac{o(\omega)}{s(\omega)}$
-</p>
-<p>
-
-In the perturbed earth, $s(\omega)=Ae^{-i\phi}$ and $o(\omega)=(A+\delta A)e^{-i(\phi+\delta\phi)}$
-</p>
-<p>
-
-In the Born approximation, $o(\omega)=s(\omega)+\delta s(\omega)$
-</p>
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-The transfer function is perturbed away from unity:<br>
-$T(\omega)=1+\delta T(\omega)$, where $\delta T(\omega)=\frac{\delta s(\omega)}{s(\omega)}$.
-
-Correct to first order in the small perturbations, $\delta T(\omega)\approx lnT(\omega)=\delta lnA(\omega)-i\delta\phi(\omega)$
+<div>
+<p>Joplin is an open source note-taking app.</p>
+<p>Capture your thoughts and securely access them from any device.</p>
+</div>
+<div class="m-6">
+<img border="rounded" src="https://joplinapp.org/images/home-top-img-2x.webp" style="display:block;margin:auto auto;height:313px;">
 </div>
 
-$$
-\delta\phi(\omega)=-Im(\frac{\delta s}{s}),\quad\quad \delta lnA(\omega)=Re(\frac{\delta s}{s})
-$$
-
-[^1]: [Zhou, Y., Dahlen, F.A. & Nolet, G., 2004. 3-D sensitivity kernels for surfacewave observables, Geophys. J. Int., 158, 142-168.](https://academic.oup.com/gji/article-abstract/158/1/142/683426)
-
 <style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+h1 {
+  background-color: #2B90B5;
+  background-image: linear-gradient(10deg, #4EC5D4 10%, #146b9c 50%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 </style>
 
----
-
-# Sentivity kernels
-
-In this study, we use the 2-D kernels[^1] derived to represent the sensitivity of surface waves to structure.
-<div grid="~ cols-2 gap-2" m="-t-2">
-<div>
-
-### 2-D sensitivity kernels
-<br>
-<br>
-<br>
-<br>
-<div>
-
-$$
-\delta d=\iint_\Omega K^c_d(r,\omega)(\delta c/c)\mathrm{d}x^2
-$$
-</div>
-</div>
-<div>
-<img border="rounded" src="/images/zhou-2d.png" >
-</div>
-</div>
-
-[^1]: [Zhou, Y., Dahlen, F.A. & Nolet, G., 2004. 3-D sensitivity kernels for surfacewave observables, Geophys. J. Int., 158, 142-168.](https://academic.oup.com/gji/article-abstract/158/1/142/683426)
-
-<style>
-.footnotes-sep {
-  @apply mt-15 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
 
 ---
 
-# Sentivity kernels
+# Compatibility
 
-In this study, we use the 2-D kernels[^1] derived to represent the sensitivity of surface waves to structure.
-<div grid="~ cols-2 gap-2" m="-t+20">
+
 <div>
-
-### 2-D sensitivity kernels
-<br>
-<br>
-
-$$
-K^c_{\phi}(r,\omega)=Im(\frac{k^2R''e^{-i[kx''-k\Delta x+\pi/4]}}{R\sqrt{2\pi kx''}})
-$$
-$$
-K^c_A(r,\omega)=-Re(\frac{k^2R''e^{-i[kx''-k\Delta x+\pi/4]}}{R\sqrt{2\pi kx''}})
-$$
+<p>Images, videos, PDFs and audio files<br>are supported.</p>
+<p>Create math expressions and diagrams<br>directly from the app.</p>
+<p>Take photos with the mobile app and<br>save them to a note.</p>
 </div>
 <div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<img border="rounded" src="/images/fig1.png" >
-</div>
-</div>
-
-<!--
-They are formulated for single-frequency observables of phase and amplitude from unwindowed
-seismograms in the time domain.
--->
-
----
-
-# Fresnel zones
-named after physicist Augustin-Jean Fresnel
-<br>
-<div grid="~ cols-2 gap-2" m="-t+20">
-<div>
-<img border="rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Fresnel_zone_disrupted.png/300px-Fresnel_zone_disrupted.png" width="277">
-</div>
-<div>
-<img border="rounded" src="/images/FresnelSVG1.svg" width="800">
-</div>
-</div>
-<div class="abs-br m-6 flex">
-
-Learn more about [Fresnel zones](https://en.wikipedia.org/wiki/Fresnel_zone).
-</div>
-<!--
-Fresnel zones are ellipsoids with the foci at the transmitter and the receiver, where the path length between the direct path and the alternative paths are multiples of half-wavelength (\lambda/2). Rays emanating from odd-numbered Fresnel zones cause destructive interference and the rays from the even-numbered Fresnel zones cause constructive interference.
--->
-
----
-
-# Map view
-<div>
-<img border="rounded" src="/images/fig2.png">
+<img border="rounded" src="https://joplinapp.org/images/home-top-img-2x.webp" style="display:block;margin:-150px 248px;height:388px;width:656px;">
 </div>
 
 <!--
@@ -241,266 +125,303 @@ windowed using a 300s window with a half cosine taper of 50s on
 each end is shown in Fig. 2.
 -->
 
-<style>
-img {
-  position: absolute;
-  top: 17%;
-  left: 20%;
-}
-</style>
-
 ---
 
-# Numerical simulation
+# Web Clipper
+## Save web pages as notes
 
-### Pseudo-spectral method[^2]
-<div>
-<img border="rounded" src="/images/fig3.png">
-</div>
-
-[^2]: [Hung, S.-H. & Forsyth, D.W., 1998. Modeling anisotropic wave propagation in oceanic inhomogeneous structures using the parallel multi-domain pseudo spectral method, Geophys. J. Int., 133, 726-740.](https://adsabs.harvard.edu/pdf/1998GeoJI.133..726H)
-
-
-<!--
-288 X 288 X 64 grid with grid spacing of 20 km in the
-horizontal directions and an average of 10 km vertically.
-
-$v_p=8$km/s, $v_s=4.62$, $\rho=3.3$kg/m^{-3}
-
-Rayleigh $v_{exterior}=4.15$, $v_{interior}=4.36$
-
--->
-
-<style>
-.footnotes-sep {
-  @apply mt-85 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-img {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-}
-</style>
-
----
-
-# Scattered wavefields
-<div>
-<img border="rounded" src="/images/fig4.png">
-</div>
-
-<!--
--->
-
-<style>
-img {
-  position: absolute;
-  top: 15%;
-  left: 20%;
-  width: 566px;
-}
-</style>
-
----
-
-# Cross-sections
-<div>
-<img border="rounded" src="/images/fig5.png">
-</div>
-
-<!--
--->
-
-<style>
-img {
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  width: 666px;
-}
-</style>
-
----
-
-# Radiation pattern
-<div>
-<img border="rounded" src="/images/afig6.png">
-</div>
-
-<!--
-The scattering is fundamental mode to fundamental mode of Rayleigh wave at period
-of 25s for P- and S-wave heterogeneities, assuming the medium is a Poisson solid.
--->
-
-<style>
-img {
-  position: absolute;
-  top: 15%;
-  left: 25%;
-  height: 453px;
-}
-</style>
-
----
-
-# Cross-section
-<div>
-<img border="rounded" src="/images/fig7.png" style="display:block;margin:auto auto;width:466px;">
-</div>
-
-<!--
-<style>
-img {
-  position: absolute;
-  top: 15%;
-  left: 20%;
-  width: 566px;
-}
-</style>
--->
-
----
-
-# Amplitude at each station
-placed along a line perpendicular to the medium boundary.
-<div>
-<img border="rounded" src="/images/fig8.png">
-</div>
-
-<!--
-Amplitude in higher velocity region is smaller, but the transition is not
-instantaneous. The case shown is for 25s period with wavelength about 100km.
--->
-
-<style>
-img {
-  position: absolute;
-  top: 22%;
-  left: 20%;
-  width: 566px;
-}
-</style>
-
----
-
-# Recovered phase velocity maps
-<div>
-<img border="rounded" src="/images/fig9.png">
-</div>
-
-<!--
--->
-
-<style>
-img {
-  position: absolute;
-  top: 22%;
-  left: 20%;
-  width: 566px;
-}
-</style>
-
----
-
-# Recovered phase velocity maps
+Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.
 
 <div grid="~ cols-2 gap-2" m="-t-2">
-<img border="rounded" src="/images/fig10-1.png" width="300">
-<img border="rounded" src="/images/fig10-2.png" width="300">
+<img border="rounded" src="/images/web.png" width="350">
+<img border="rounded" src="https://joplinapp.org/images/save-web-img.png" width="400">
 </div>
 
-<img class="img2" border="rounded" src="/images/fig10-3.png" width="300">
+
+---
+class: text-center
+---
+
+# Appearance
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+      <img border="rounded" src="/images/ini.png">
+		</div>
+		<div class="back">
+      <img border="rounded" src="/images/iniout.png">
+		</div>
+	</div>
+</div>
 
 <style>
+.flip-container {
+  margin: 50px 100px;
+	perspective: 1000;
+}
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
 
-.img2 {
-  position: absolute;
-  top: 55%;
-  left: 30%;
-  width: 313px;
+.flip-container, .front, .back {
+	width: 640px;
+	height: 580px;
+}
+
+.flipper {
+	transition: 0.9s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+}
+
+.back {
+	transform: rotateY(180deg);
 }
 </style>
 
 <!--
-
+<img border="rounded" src="/images/ini.png" style="display:block;margin:auto 50px;width:550px;">
+<img border="rounded" src="/images/iniout.png" style="display:block;margin:-165px 295px;width:550px;">
 -->
 
 ---
+layout: two-cols
+---
 
-# Constructed model
-with random phase velocity.
-<div>
-<img border="rounded" src="/images/fig11.png">
-</div>
+# Preview
+Instances
+
+
+
+
+
+
+
+::right::
+
+# Markdown
+```markdown
+# header 1
+## header 2
+Some sentences.
+**Bold** and *italic*.
+***Bold and italic***.
+
+1. first
+1. second
+
+- one
+- two
+
+|year|month|day|
+|---|---|---|
+|2022|5|27|
+|2023|6|28|
+```
+<br>
+
+Have a look at the [Markdown Guide](https://github.com/laurent22/joplin/blob/dev/readme/markdown.md) and [KaTeX](https://katex.org/) for more information.
 
 <!--
+Latex
+
+$$
+\begin{array}{c}
+
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+
+\nabla \cdot \vec{\mathbf{B}} & = 0
+
+\end{array}
+$$
+
+```mermaid
+graph TD;
+    A-- >B;
+    A-- >C;
+    B-- >D;
+    C-- >D;
+```
 -->
 
-<style>
-img {
-  position: absolute;
-  top: 20%;
-  left: 24%;
-  width: 453px;
-}
-</style>
+---
+layout: image
+image: https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png
+class: text-center
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# go everywhere you want
+
 
 ---
 
-# Amplitude distribution
-with random phase velocity.
-<div>
-<img border="rounded" src="/images/fig12.png" style="display:block;margin:auto auto;width:699px;">
+# Searching
+Both [Simple FTS Queries](https://www.sqlite.org/fts3.html#simple_fts_queries) and [Full-Text Index Queries](https://www.sqlite.org/fts3.html#full_text_index_queries) are supported.
+<br>
+<p>Joplin implements the SQLite Full Text Search (FTS4) extension.
+<br>
+It means the content of all the notes is indexed in real time and<br>search queries return results very fast.</p>
+<p>See below for the list of supported queries:</p>
+
+|Search type |	Description|
+|---|---|
+|Single word|	Returns all the notes that contain this term.|
+|Multiple word|	Returns all the notes that contain all these words,<br>but not necessarily next to each other.|
+|Phrase|Add double quotes to return the notes that contain<br>exactly this phrase.|
+|Prefix|Add a wildcard to return all the notes that contain<br>a term with a specified prefix.
+
+<div class="big-box">
+  <img src="/images/lintao.gif">
 </div>
 
-<!--
-
 <style>
-img {
+.big-box{
   position: absolute;
   top: 22%;
-  left: 3%;
-  width: 915px;
+  left: 65%;
+  width: 324px;
+  height: 157px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.big-box img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
--->
+
 
 ---
 
-# Recovered maps
-with random phase velocity.
+# Encryption
+
+<br>
+
+## 100% your data
+
 <div>
-<img border="rounded" src="/images/fig13.png" style="display:block;margin:auto auto;width:720px;">
+<p>The app is open source and your notes are<br>
+saved to an open format, so you'll<br>
+always have access to them.</p>
+<p>Uses End-To-End Encryption (E2EE)<br>
+to secure your notes and ensure no-one<br>but yourself can access them.</p>
 </div>
+
+<img border="rounded" src="https://joplinapp.org/images/your-data-img.png" style="display:block;margin:-170px 255px;height:313px;width:596px;">
 
 <!--
 -->
 
 ---
 
-# Phase velocity anomalies in southern California
-for Rayleigh waves at 100s period.
-<div>
-<img border="rounded" src="/images/fig14.png">
+<h1 class="text-center">
+Open <span class="frame-bg frame-bg-yellow">Source</span>
+</h1>
+
+<div grid="~ cols-2 gap-2">
+
+<img src="/images/in-the-press-img-left.png">
+
+<img src="/images/in-the-press-img-right.png" style="display:block;margin:auto 295px;">
 </div>
 
-<!--
--->
+<img src="/images/comu.png" style="display:block;margin:-415px auto;width:555px;">
+
 
 <style>
-img {
-  position: absolute;
-  top: 20%;
-  left: 4%;
-  width: 915px;
+.frame-bg {
+	background-size: contain;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding-bottom: 1.5px;
+}
+
+.frame-bg-yellow {
+	background-image: url("/images/frame-yellow.png");
 }
 </style>
+
+<!--
+
+-->
+
+---
+
+# Conclusion
+<br>
+<p>Joplin is a free and open-source note-taking app available on Windows,<br>Mac, Android, iOS, and Linux.</p>
+<p>It lets you create multiple types of notes, reminders, and alarms, all of which<br>can be synced with a handful of cloud services like Dropbox, NextCloud,<br>OneDrive, and WebDAV.</p>
+<p>The app also includes a web clipper tool and even supports handwritten notes,<br>but in my opinion, Joplin's best feature is the built-in end-to-end encryption<br>for keeping your notes private.</p>
+
+
+<div class="w-60 relative mt-6">
+  <div class="relative w-40 h-40">
+    <img
+      v-motion
+      :initial="{ x: 750, y: -100, scale: 1.5, rotate: -50 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/LinuxIcons/256x256.png"
+    />
+  </div>
+
+  <div
+    class="text-5xl absolute top-14 left-50 text-[#2B90B6] -z-1"
+    v-motion
+    :initial="{ x: -80, opacity: 0}"
+    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
+    Joplin
+  </div>
+</div>
+
+<script setup lang="ts">
+const final = {
+  x: 0,
+  y: 0,
+  rotate: 0,
+  scale: 1,
+  transition: {
+    type: 'spring',
+    damping: 10,
+    stiffness: 20,
+    mass: 2
+  }
+}
+</script>
+
+<div
+  v-motion
+  :initial="{ x:235, y: 40, opacity: 0}"
+  :enter="{ x: 225, y: -50, opacity: 1, transition: { delay: 3500 } }">
+
+[Learn More](https://lifehacker.com/the-best-note-taking-apps-1837842880)
+
+</div>
 
 
 ---
@@ -510,4 +431,4 @@ class: text-center
 
 # Thank You
 
-[sensitivity kernels](https://sli.dev) · [surface waves](https://github.com/slidevjs/slidev) · [tomography](https://sli.dev/showcases.html)
+[Joplin](https://joplinapp.org/) · [Markdown](http://markdown.p2hp.com/) · [Vim](https://www.vim.org/)
